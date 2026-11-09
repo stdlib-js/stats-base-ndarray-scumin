@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,16 +16,27 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { float32ndarray } from '@stdlib/types/ndarray';
 
 /**
-* Compute the cumulative minimum value of a one-dimensional single-precision floating-point ndarray.
+* Computes the cumulative minimum value of a one-dimensional single-precision floating-point ndarray.
 *
-* @module @stdlib/stats-base-ndarray-scumin
+* ## Notes
+*
+* -   The function expects the following ndarrays:
+*
+*     -   a one-dimensional input ndarray.
+*     -   a one-dimensional output ndarray.
+*
+* @param arrays - array-like object containing ndarrays
+* @returns output ndarray
 *
 * @example
 * var Float32Vector = require( '@stdlib/ndarray-vector-float32' );
-* var scumin = require( '@stdlib/stats-base-ndarray-scumin' );
 *
 * var x = new Float32Vector( [ 1.0, 3.0, 4.0, 2.0 ] );
 * var y = new Float32Vector( [ 0.0, 0.0, 0.0, 0.0 ] );
@@ -36,12 +47,9 @@
 * var bool = ( v === y );
 * // returns true
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function scumin( arrays: [ float32ndarray, float32ndarray ] ): float32ndarray;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = scumin;
